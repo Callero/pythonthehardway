@@ -1,15 +1,30 @@
-i = 0
-numbers = []
+# while i < 6:
+#     print "At the top i is %d" % i
+#     numbers.append(i)
+#
+#     i = i + 1
+#     print "Numbers now: ", numbers
+#     print "At the bottom i is % d" % i
+#
+# print "The numbers: "
+#
+# for num in numbers:
+#     print(num)
 
-while i < 6:
-    print "At the top i is %d" % i
-    numbers.append(i)
+def printstuff(iterations):
+    i = 0
+    numbers = []
+    while i < iterations:
+        print "At the top i is %d" % i
+        numbers.append(i)
 
-    i = i + 1
-    print "Numbers now: ", numbers
-    print "At the bottom i is % d" % i
+        i += 1
 
-print "The numbers: "
+        print "Numbers now: ", numbers
+        print "At the bottom i is % d" % i
 
-for num in numbers:
-    print(num)
+    for num in numbers:
+        print(num)
+
+
+printstuff(4)
