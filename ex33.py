@@ -11,14 +11,14 @@
 # for num in numbers:
 #     print(num)
 
-def printstuff(iterations):
+def printstuff(iterations, increments):
     i = 0
     numbers = []
     while i < iterations:
         print "At the top i is %d" % i
         numbers.append(i)
 
-        i += 1
+        i += increments
 
         print "Numbers now: ", numbers
         print "At the bottom i is % d" % i
@@ -27,4 +27,4 @@ def printstuff(iterations):
         print(num)
 
 
-printstuff(4)
+printstuff(10, 2)
