@@ -2,11 +2,13 @@ from sys import exit
 
 
 def gold_room():
+    """Defines what happens in the gold room"""
     print "This room is full of gold, How much do you take?"
 
-    next = raw_input("> ")
-    if "0" in next or "1" in next:
-        how_much = int(next)
+    nextmove = raw_input("> ")
+    how_much = 0
+    if "0" in nextmove or "1" in nextmove:
+        how_much = int(nextmove)
     else:
         dead("Man, learn to type a number.")
 
@@ -18,6 +20,7 @@ def gold_room():
 
 
 def bear_room():
+    """Defines what happens in the bear room"""
     print "There is a bear here."
     print "The bear has a bunch of honey."
     print "The fat bear is in front of another door."
@@ -25,52 +28,55 @@ def bear_room():
     bear_moved = False
 
     while True:
-        next = raw_input("> ")
+        nextmove = raw_input("> ")
 
-        if next == "take honey":
+        if nextmove == "take honey":
             dead("The bear looks at you then slaps your face off.")
 
-        elif next == "taunt bear" and not bear_moved:
+        elif nextmove == "taunt bear" and not bear_moved:
             print "The bear has moved from the door. You can go through it now."
             bear_moved = True
-        elif next == "taunt bear" and bear_moved:
+        elif nextmove == "taunt bear" and bear_moved:
             dead("The bear gets pissed off and chews your leg off.")
-        elif next == "open door" and bear_moved:
+        elif nextmove == "open door" and bear_moved:
             gold_room()
         else:
             print "I have no idea what that means."
 
 
 def cthulhu_room():
+    """Defines what happens when visiting Cthulhu"""
     print "Here you see the great evil Cthulhu."
     print "He, it, whatever stares at you and you go insane."
     print "Do you flee for your life or eat your head?"
 
-    next = raw_input("> ")
+    nextmove = raw_input("> ")
 
-    if "flee" in next:
+    if "flee" in nextmove:
         start()
-    elif "head" in next:
+    elif "head" in nextmove:
         dead("Well, that was tasty!")
     else:
         cthulhu_room()
 
 
 def dead(why):
+    """Tells you why you died"""
     print why, "Good job!"
     exit(0)
 
 
 def start():
+    """Starts the adventure"""
     print "You are in a dark room."
     print "There is a door to your right and left."
     print "Which one do you take?"
 
-    next = raw_input("> ")
+    nextmove = raw_input("> ")
 
-    if next == "left":
+    if nextmove == "left":
         bear_room()
-    elif next == "right":
+    elif nextmove == "right":
         cthulhu_room()
     else:
         dead("You stumble around the room until you starve.")
