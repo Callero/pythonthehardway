@@ -11,10 +11,9 @@
 # for num in numbers:
 #     print(num)
 
-def printstuff(iterations, increments):
-    i = 0
+def printstuff(start, stop, increments):
     numbers = []
-    while i < iterations:
+    for i in range(start, stop + 1, increments):
         print "At the top i is %d" % i
         numbers.append(i)
 
@@ -27,4 +26,4 @@ def printstuff(iterations, increments):
         print(num)
 
 
-printstuff(10, 2)
+printstuff(1, 10, 1)
