@@ -25,6 +25,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 For more information, please refer to <http://unlicense.org>
 """
 
+from sys import exit
+
 def north_pole():
     """This is the start of the adventure, The North Pole"""
 
@@ -69,10 +71,8 @@ def select__north_pole_place(goto_next):
         sleigh_launch()
 
     elif goto_next == "4":
-        print "You are already there!"
-        print "Go where else?"
-        goto_next = raw_input("I'll go to number: ")
-        select__north_pole_place(goto_next)
+        north_pole()
+
     else:
         print "That's not a place on the North Pole!"
         print "Please answer with a number from the list."
@@ -81,8 +81,26 @@ def select__north_pole_place(goto_next):
 
 
 def gift_shop():
-    print "Gift shop!"
-    # TODO write out gift shop
+    print "\n\nYou are at the Gift Shop!"
+    print "You see thousands of little elves slaving away"
+    print "One of them takes a look at you and says:"
+    print "\t'Hey Santa!'"
+    print "Do you:\n\t1: Slap him\n\t2:Hug him"
+    elf_action = raw_input("Select #: ")
+
+    while elf_action == "1" or elf_action == "2":
+        if elf_action == "1":
+            print "\n\n***************************************************"
+            print "***************************************************"
+            print "Bad santa!"
+            quit("You aren't fit to be santa!")
+        elif elf_action == "2":
+            print "\nYou hug the little slave and then head back to base"
+            print "***************************************************"
+            print "***************************************************"
+            north_pole()
+    gift_shop()
+
 
 
 def reindeer_stables():
@@ -94,5 +112,9 @@ def sleigh_launch():
     print "Sleigh Launch!"
     # TODO write out sleigh launch
 
+
+def quit(why):
+    print why, "Bye!"
+    exit(0)
 
 north_pole()
