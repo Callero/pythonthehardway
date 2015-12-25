@@ -31,7 +31,7 @@ def north_pole():
     """This is the start of the adventure, The North Pole"""
 
     visited = 0
-    north_pole_places = ["The Gift Shop", "The Reindeer Stables", "The Sleigh Launch Area", "The Base"]
+    north_pole_places = ["The Gift Shop", "The Reindeer Stables", "The Base"]
 
     if visited == 0:
         print "You are at the start of your adventure! \n "
@@ -68,9 +68,6 @@ def select__north_pole_place(goto_next):
         reindeer_stables()
 
     elif goto_next == "3":
-        sleigh_launch()
-
-    elif goto_next == "4":
         north_pole()
 
     else:
@@ -104,17 +101,34 @@ def gift_shop():
 
 
 def reindeer_stables():
-    print "Reindeer stables!"
-    # TODO write out reindeer stables
+    print "\n\nYou are at the Reindeer Stables!"
+    print "Dasher, Dancer, Prancer, Vix.. ah, fuck it, are waiting for you to take the reigns and go!"
+    print "Where do you want to go:"
+    print "Do you go to:\n\t1: Sweden\n\t2:Ethiopia"
+    action = raw_input("Select #: ")
+
+    while action == "1" or action == "2":
+        if action == "2":
+            print "\n\n***************************************************"
+            print "***************************************************"
+            print "Silly santa!"
+            quit("Santa doesn't visit poor children!")
+        elif action == "1":
+            print "\nYou whip the reindeer into a frenzy and go to Sweden!"
+            print "***************************************************"
+            print "***************************************************"
+            sweden()
+    sweden()
 
 
-def sleigh_launch():
-    print "Sleigh Launch!"
-    # TODO write out sleigh launch
+def sweden():
+    print "You are in Sweden!"
+    print "You hand out gifts to all the little kids in Sweden and \nreturn home in time for dinner!"
+    quit("Enjoy the rest of christmas!")
 
 
 def quit(why):
-    print why, "Bye!"
+    print why, "\nBye!"
     exit(0)
 
 north_pole()
