@@ -26,18 +26,19 @@ For more information, please refer to <http://unlicense.org>
 """
 
 from sys import exit
+visited_north_pole = 0
 
 def north_pole():
     """This is the start of the adventure, The North Pole"""
 
-    visited = 0
+    global visited_north_pole
     north_pole_places = ["The Gift Shop", "The Reindeer Stables", "The Base"]
 
-    if visited == 0:
+    if visited_north_pole == 0:
         print "You are at the start of your adventure! \n "
         print "\tYou are Santa Claus, ready to go hand out gifts to the world!"
         print "\tYou are at your base, the North Pole."
-        visited += 1
+        visited_north_pole += 1
         print "Where do you want to go?"
         print "On the North Pole, you can go to:"
         print place_print(north_pole_places)
