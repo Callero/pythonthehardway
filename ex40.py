@@ -1,3 +1,5 @@
+from time import sleep
+
 class Song(object):
 
     def __init__(self, lyrics):
@@ -5,6 +7,7 @@ class Song(object):
 
     def sing_me_a_song(self):
         for line in self.lyrics:
+            sleep(1)
             print line
 
 happy_bday = Song(["Happy birthday to you",
