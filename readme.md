@@ -6,3 +6,4 @@
 
 Follow along at [Python The Hard Way](http://learnpythonthehardway.org/)
 
+Python The Hard Way is Copyright  © 2014 Zed A. Shaw
