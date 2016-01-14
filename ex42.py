@@ -30,6 +30,47 @@ class Person(object):
 class Employee(Person):
 
     def __init__(self, name, salary):
-        ##
+        ## TODO Answer
         super(Employee, self).__init__(name)
         self.salary = salary
+
+
+## Fish is an object
+class Fish(object):
+    pass
+
+## Salmon is-a Fish
+class Salmon(Fish):
+    pass
+
+## Halibut is-a Fish
+class Halibut(Fish):
+    pass
+
+
+## rover is-a Dog
+rover = Dog("Rover")
+
+## satan is-a Cat
+satan = Cat("Satan")
+
+## mary is-a Person
+mary = Person("Mary")
+
+## Mary has-a pet
+mary.pet = satan
+
+## frank is-a Employee with a Salary
+frank = Employee("Frank", 120000)
+
+## frank has-a pet
+frank.pet = rover
+
+## flipper is-a instance of Fish
+flipper = Fish()
+
+## crouse is-a instance of Salmon
+crouse = Salmon()
+
+## harry is-a instance of Halibut
+harry = Halibut()
