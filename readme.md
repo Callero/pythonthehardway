@@ -1,7 +1,7 @@
 #This is just me learning Python, **slowly**
 
-##I'm at 44% now:
-[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXoooooooooooooooooooooooooooooooooooooooooooooooooooooooo]
+##I'm at 46% now:
+
 
 
 ##Follow along at [Python The Hard Way](http://learnpythonthehardway.org/)
