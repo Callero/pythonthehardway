@@ -1,6 +1,6 @@
 #This is just me learning Python, **slowly**
 
-##I'm at 49% now:
+##I'm at 50% now:
 
 
 
